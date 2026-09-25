@@ -101,6 +101,7 @@ a { color: inherit; }
 .site-nav .nav-carta { background: var(--terracota); border: 1.5px solid var(--terracota); color: var(--negro); padding: .6rem 1.1rem; font-weight: 700; }
 .site-nav .nav-carta:hover { background: var(--crema); border-color: var(--crema); }
 .nav-toggle { display: none; }
+.header-carta { display: none; }
 
 /* Hero */
 .hero {
@@ -256,6 +257,15 @@ a { color: inherit; }
     display: inline-flex; align-items: center; gap: .7rem; background: none; border: 1.5px solid var(--arena);
     color: var(--crema); padding: .6rem .9rem; font: inherit; font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; cursor: pointer;
   }
+  .brand, .nav-toggle { flex-shrink: 0; }
+  .header-carta {
+    display: inline-block; margin-left: auto; margin-right: .5rem; white-space: nowrap; text-decoration: none;
+    background: var(--terracota); border: 1.5px solid var(--terracota); color: var(--negro);
+    padding: .6rem .9rem; font-size: .75rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  }
+  .header-carta:hover { background: var(--crema); border-color: var(--crema); }
+  .header-carta.is-pending { opacity: .75; border-style: dashed; background: transparent; color: inherit; border-color: currentColor; cursor: default; }
+  .header-carta.is-pending:hover { background: transparent; color: inherit; }
   .nav-toggle__bars, .nav-toggle__bars::before { display: block; width: 18px; height: 2px; background: currentColor; position: relative; }
   .nav-toggle__bars::before { content: ""; position: absolute; top: 6px; left: 0; }
   .site-nav {
@@ -267,6 +277,7 @@ a { color: inherit; }
   .site-nav ul { flex-direction: column; align-items: stretch; gap: 0; }
   .site-nav a { display: block; padding: 1rem 0; border-bottom: 1px solid rgba(205, 186, 147, .18); font-size: .85rem; }
   .site-nav .nav-carta { margin-top: 1rem; text-align: center; }
+  .site-nav .nav-item--carta { display: none; }
   .site-nav .nav-cta { margin-top: .65rem; text-align: center; }
   .pillars { grid-template-columns: 1fr; }
   .pillars li { padding: 1.4rem 0; border-bottom: 1px solid rgba(13, 11, 10, .18); }
@@ -280,6 +291,11 @@ a { color: inherit; }
   .hero__places { font-size: .68rem; letter-spacing: .2em; }
   .btn { width: 100%; }
   .hero__actions, .visit__actions { flex-direction: column; }
+}
+
+@media (max-width: 380px) {
+  .header-carta { padding: .6rem .6rem; letter-spacing: .06em; margin-right: .4rem; }
+  .nav-toggle { padding: .6rem .6rem; gap: .5rem; letter-spacing: .06em; }
 }
 
 @media (prefers-reduced-motion: reduce) {

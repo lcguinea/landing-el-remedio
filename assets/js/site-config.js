@@ -21,7 +21,7 @@ window.ELREMEDIO_CONFIG = {
       direccion: "C/ de Quart, 104, Extramurs, 46008 València",
       horario: "Lunes a sábado, 07:00–22:00 · Domingo, 08:00–22:00",
       telefono: "+34 963 516 760",
-      mapa: "https://maps.app.goo.gl/njSv5FvWeccxnMPB7"
+      mapa: "https://maps.app.goo.gl/MkTRMPKPB1xFoEUU9"
     },
     nuevoCentro: {
       direccion: "Calle Pio XII, 2, Local 59B, 46009 València",
